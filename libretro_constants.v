@@ -222,7 +222,7 @@ pub const (
 	retro_sensor_gyroscope_y                                      = 4
 	retro_sensor_gyroscope_z                                      = 5
 	retro_sensor_illuminance                                      = 6
-	retro_hw_frame_buffer_valid                                   = (voidptr - 1)
+	retro_hw_frame_buffer_valid                                   = C.RETRO_HW_FRAME_BUFFER_VALID
 	retro_memory_access_write                                     = (1 << 0)
 	retro_memory_access_read                                      = (1 << 1)
 	retro_memory_type_cached                                      = (1 << 0)
