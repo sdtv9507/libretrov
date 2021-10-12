@@ -1,7 +1,7 @@
 module libretrov
 
 // retro_language Id values for LANGUAGE
-enum Retro_language {
+pub enum Retro_language {
 	retro_language_english = 0
 	retro_language_japanese = 1
 	retro_language_french = 2
@@ -27,11 +27,11 @@ enum Retro_language {
 	retro_language_asturian = 22
 	retro_language_finnish = 23
 	retro_language_last
-	// ensure sizeof(enum) == sizeof(int)
+	// ensure sizeof(pub enum) == sizeof(int)
 	retro_language_dummy = C.INT_MAX
 }
 
-enum Retro_key {
+pub enum Retro_key {
 	retrok_unknown = 0
 	retrok_backspace = 8
 	retrok_tab = 9
@@ -174,10 +174,10 @@ enum Retro_key {
 	retrok_undo = 322
 	retrok_oem_102 = 323
 	retrok_last
-	retrok_dummy = C.INT_MAX // ensure sizeof(enum) == sizeof(int)
+	retrok_dummy = C.INT_MAX // ensure sizeof(pub enum) == sizeof(int)
 }
 
-enum Retro_mod {
+pub enum Retro_mod {
 	retrokmod_none = 0x0000
 	retrokmod_shift = 0x01
 	retrokmod_ctrl = 0x02
@@ -186,10 +186,10 @@ enum Retro_mod {
 	retrokmod_numlock = 0x10
 	retrokmod_capslock = 0x20
 	retrokmod_scrollock = 0x40
-	retrokmod_dummy = C.INT_MAX // ensure sizeof(enum) == sizeof(int)
+	retrokmod_dummy = C.INT_MAX // ensure sizeof(pub enum) == sizeof(int)
 }
 
-enum Retro_hw_render_interface_type {
+pub enum Retro_hw_render_interface_type {
 	retro_hw_render_interface_vulkan = 0
 	retro_hw_render_interface_d3d9 = 1
 	retro_hw_render_interface_d3d10 = 2
@@ -199,12 +199,12 @@ enum Retro_hw_render_interface_type {
 	retro_hw_render_interface_dummy = C.INT_MAX
 }
 
-enum Retro_hw_render_context_negotiation_interface_type {
+pub enum Retro_hw_render_context_negotiation_interface_type {
 	retro_hw_render_context_negotiation_interface_vulkan = 0
 	retro_hw_render_context_negotiation_interface_dummy = C.INT_MAX
 }
 
-enum Retro_log_level {
+pub enum Retro_log_level {
 	retro_log_debug = 0
 	retro_log_info
 	retro_log_warn
@@ -212,7 +212,7 @@ enum Retro_log_level {
 	retro_log_dummy = C.INT_MAX
 }
 
-enum Retro_sensor_action {
+pub enum Retro_sensor_action {
 	retro_sensor_accelerometer_enable = 0
 	retro_sensor_accelerometer_disable
 	retro_sensor_gyroscope_enable
@@ -222,19 +222,19 @@ enum Retro_sensor_action {
 	retro_sensor_dummy = C.INT_MAX
 }
 
-enum Retro_camera_buffer {
+pub enum Retro_camera_buffer {
 	retro_camera_buffer_opengl_texture = 0
 	retro_camera_buffer_raw_framebuffer
 	retro_camera_buffer_dummy = C.INT_MAX
 }
 
-enum Retro_rumble_effect {
+pub enum Retro_rumble_effect {
 	retro_rumble_strong = 0
 	retro_rumble_weak = 1
 	retro_rumble_dummy = C.INT_MAX
 }
 
-enum Retro_hw_context_type {
+pub enum Retro_hw_context_type {
 	retro_hw_context_none = 0
 	retro_hw_context_opengl = 1
 	retro_hw_context_opengles2 = 2
@@ -246,20 +246,20 @@ enum Retro_hw_context_type {
 	retro_hw_context_dummy = C.INT_MAX
 }
 
-enum Retro_pixel_format {
+pub enum Retro_pixel_format {
 	retro_pixel_format_0rgb1555 = 0
 	retro_pixel_format_xrgb8888 = 1
 	retro_pixel_format_rgb565 = 2
 	retro_pixel_format_unknown = C.INT_MAX
 }
 
-enum Retro_message_target {
+pub enum Retro_message_target {
 	retro_message_target_all = 0
 	retro_message_target_osd
 	retro_message_target_log
 }
 
-enum Retro_message_type {
+pub enum Retro_message_type {
 	retro_message_type_notification = 0
 	retro_message_type_notification_alt
 	retro_message_type_status
